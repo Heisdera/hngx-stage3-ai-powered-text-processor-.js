@@ -66,7 +66,7 @@ export const ChatMessages = ({ messages, isThinking, setMessages }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       ref={messagesContainerRef}
-      className="flex flex-col gap-4 max-h-[70vh] overflow-y-auto custom-scrollbar p-4 rounded-xl md:max-h-[60vh]"
+      className="flex flex-col gap-4 max-h-[70vh] overflow-y-auto custom-scrollbar p-4 rounded-xl"
       role="log"
       aria-live="polite"
     >
@@ -91,6 +91,7 @@ export const ChatMessages = ({ messages, isThinking, setMessages }) => {
                   <div className="flex gap-2 items-center">
                     <div>
                       <Select
+                        value={selectedLanguage}
                         onValueChange={(value) => setSelectedLanguage(value)}
                       >
                         <SelectTrigger
