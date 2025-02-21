@@ -91,7 +91,9 @@ export const ChatMessages = ({ messages, isThinking, setMessages }) => {
                   <div className="flex gap-2 items-center">
                     <div>
                       <Select
-                        value={selectedLanguage}
+                        value={
+                          selectedLanguage === null ? "" : selectedLanguage
+                        }
                         onValueChange={(value) => setSelectedLanguage(value)}
                       >
                         <SelectTrigger
